@@ -1,0 +1,12 @@
+-- 뷰생성
+CREATE or REPLACE view 뷰이름 AS 
+ ((SELECT s.sid as id, s.spw as pw, 'student' as type FROM student s)
+ UNION (SELECT p.pid, p.ppw, 'professor' as type FROM professor p))
+ UNION (SELECT a.aid, a.apw, 'administer' as type FROM administer a);
+
+-- 세션에 타입까지 넣어서 member라는 vo를 만들어 놓는다.
+ class Member(
+  private id;
+  private pw;
+  private type;
+)

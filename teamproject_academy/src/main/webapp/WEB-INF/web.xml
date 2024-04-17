@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name></display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- DB 접속정보 서블릿 -->
+  <servlet>
+        <servlet-name>dbcpInit</servlet-name>
+        <servlet-class>util.DBCPInit</servlet-class>
+        <init-param>
+            <param-name>jdbcDriver</param-name>
+            <param-value>com.mysql.jdbc.Driver</param-value>
+        </init-param>
+        <init-param>
+            <param-name>jdbcUrl</param-name>
+            <param-value>
+            <!-- DB 연결 url 작성부분 -->
+                jdbc:mysql://localhost:3306/ezenuniv?characterEncoding=UTF-8&amp;useSSL=false
+            </param-value>
+        </init-param>
+        <init-param>
+        <!-- DB 연결 user 작성부분 -->
+            <param-name>dbUser</param-name>
+            <param-value>dteam</param-value>
+        </init-param>
+        <init-param>
+         <!-- DB 연결 password 작성부분 -->
+            <param-name>dbPassword</param-name>
+            <param-value>ezen</param-value>
+        </init-param>
+        <init-param>
+            <param-name>poolName</param-name>
+            <param-value>ezenuniv</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+	<!-- xss 공격 방지 필터링 부분 -->
+	<!-- <filter>
+	    <filter-name>XSS</filter-name>
+	    <filter-class>util.CrossScriptingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+	    <filter-name>XSS</filter-name>
+	    <url-pattern>/*</url-pattern>
+	</filter-mapping> -->
+
+</web-app>

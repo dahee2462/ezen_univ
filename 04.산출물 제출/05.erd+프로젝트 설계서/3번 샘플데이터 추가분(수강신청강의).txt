@@ -1,0 +1,26 @@
+DELIMITER $$
+DROP PROCEDURE IF EXISTS loopInsert$$
+ 
+CREATE PROCEDURE loopInsert()
+BEGIN
+    DECLARE i INT DEFAULT 1;
+        
+    WHILE i <= 10 DO
+          
+		
+            -- 강의정보
+         INSERT INTO lecture(lname,lyear,lsemester,lcredit,ltime, lroom,lmaxpeople,
+			lintro, lfocus,lstatus,pno)
+          VALUES('컴퓨터공학론','2024','1','3','3',concat('공대 1호관',i),30,
+			'소프트웨어,하드웨어의 기초부분을 공부하여, 컴퓨터 시스템에 대한 이해를 돕는다.',
+            '새롭게 개발되는 소프트웨어,하드웨어 구성요소를 정의하고, 이들의 구조 및 성질을 이해하고, 총체적으로 결합된 컴퓨터 시스템을, 높은 성능을 보장하면서도 매우 안전하게 만드는 연구를 수행한다.
+             수강 후 컴퓨터 시스템에 대한 이해를 통하여 운영체제 내의 소프트웨어 계층을 최적화하고, 컴퓨터 시스템을 외부의 침입이나 공격으로부터 보호하며, 대용량 데이터들을 효과적으로 처리하는 분산/병렬 프레임워크를 구현하고 개선하는 연구를 진행한다.',2,i);
+            
+
+        SET i = i + 1;
+    END WHILE;
+END$$
+DELIMITER $$
+
+
+CALL loopInsert;

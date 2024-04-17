@@ -1,0 +1,18 @@
+프론트
+int, String을 받기 전에 null, "",undefined 를 받지 못하게 방지
+백
+int, String을 받기 전에 null,""를 받지 못하게 방지
+
+int 형변환의 경우 NPE 오류 방지- try catch문
+
+정수값 오버플로우
+int를 받기 전에 음수나 초과값을 넣지 못하게 방지
+
+
+sql 삽입- preparedStatement로 방지됨
+
+html삽입- 서버단에서 리퀘스트에서 받아온 파라미터에 대해
+ <>/등의 단어를 &lt; &gt; 등으로 바꿔주는 메소드 필요
+
+오류 메세지 통한 정보 노출
+e.stacktrace 다 지우고 모든 에러에 대해 동일한 에러페이지로 이동

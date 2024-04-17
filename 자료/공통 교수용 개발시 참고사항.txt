@@ -1,0 +1,37 @@
+기능 구현시 참고사항
+
+시큐어코딩 필터링(수정필요)
+
+제목 : 페이지 이름
+   부제목 : 해당 페이지 루트 / 강의명 / 사용자 편의성에 맞춰서 작성
+
+공통
+초기비밀번호는 학생번호, 교수번호로 유효성 검사에 맞게 부여
+
+
+교수
+출석부 페이지 만들기
+출석관리에서 왼쪽 달력, 오른쪽 출석 입력하는 테이블 만들기
+
+성적관리 세부페이지에서 출석률 표시
+
+
+성적관리에서 교수, 관리자 누가 업데이트 했는지 페이지 노출만(간략하게) 
+   -> 날짜 yyyy-mm-dd hh:mm:ss / id / 이름
+
+
+페이지 작성 후 시큐어코딩 마무리
+// 사용자의 비밀번호
+		String password = "!@#$password1234";
+
+		// 위 비밀번호의 BCrypt 알고리즘 해쉬 생성
+		// passwordHashed 변수는 실제 데이터베이스에 저장될 60바이트의 문자열이 된다.
+		String passwordHashed = BCrypt.hashpw(password, BCrypt.gensalt());
+
+		// 위 문장은 아래와 같다. 숫자가 높아질수록 해쉬를 생성하고 검증하는 시간은 느려진다.
+		// 즉, 보안이 우수해진다. 하지만 그만큼 응답 시간이 느려지기 때문에 적절한 숫자를 선정해야 한다. 기본값은 10이다.
+		String passwordHashed = BCrypt.hashpw(password, BCrypt.gensalt(10));
+
+		// 생성된 해쉬를 원래 비밀번호로 검증한다. 맞을 경우 true를 반환한다.
+		// 주로 회원 로그인 로직에서 사용된다.
+		boolean isValidPassword = BCrypt.checkpw(password, passwordHashed);

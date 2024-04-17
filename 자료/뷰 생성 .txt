@@ -1,0 +1,10 @@
+-- 뷰생성
+CREATE or REPLACE view MemberVO AS 
+ ((SELECT s.sid as id, 'student' as type FROM student s)
+ UNION (SELECT p.pid, 'professor' as type FROM professor p))
+ UNION (SELECT a.aid, 'administer' as type FROM administer a);
+
+-- 뷰삭제
+ drop view MemberVO;
+
+-- MemberVO 뷰 vo 만들어놨는데 id랑 type만 있으니 추가하실분은 추가하셔도 됩니다.

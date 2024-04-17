@@ -1,0 +1,15 @@
+[교수]
+-교수 메인페이지: professor main
+교수과목(메인)>강의계획서 조회:inquiry of lecture plan
+공지사항(메인)>공지사항 상세페이지:notice view
+공지사항 목록페이지:notice list
+-출석관리
+출석관리 목록페이지:attendance check list
+출석관리 상세페이지:attendance check view
+-성적관리
+성적관리 목록페이지:grade management list
+성적관리 상세페이지:grade management view
+-마이페이지(통일성을 위해 교수관리조회로 바꿔야할듯)
+mypage/professor management inquiry
+-비밀번호변경
+changePW

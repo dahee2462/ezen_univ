@@ -1,0 +1,28 @@
+1. API다운: SMTP 메일 전송을 위해 필요한 외부 라이브러리.
+- Mail 라이브러리:개발자의 gmail과 연동해 이메일을 발송하기 위함
+http://www.oracle.com/technetwork/java/javasebusiness/downloads/java-archive-downloads-eeplat-419426.html#javamail-1.4.7-oth-JPR
+
+- Activation Class
+http://www.oracle.com/technetwork/java/javasebusiness/downloads/java-archive-downloads-java-plat-419418.html#jaf-1.1-fr-oth-JPR
+
+2. Gmail.java에서 getPasswordAuthentication메소드를 오버라이드 해 개발자의 이메일 id와 비밀번호를 리턴한다
+
+3. SHA256.java(잘모름):가입할 때 입력한 이메일 주소를 해시처리한 값과 인증을 시도하는 이메일을 해시처리한 값을 비교해 사용자 인증을 하기 위함
+			회원가입 및 이메일 인증에 사용할 해시 데이터를 생성
+
+4. emailSendAction.jsp: 이메일 인증 메세지를 이메일을 통해 전송
+- 사용자에게 보낼 메세지 기입
+  String host = "http://localhost:8080/AuthGoogle/";
+  String from = "개발자 이메일 아이디";
+  String to = request.getParameter("email"); -> 유저가 입력한 인증아이디
+  String code = 랜덤한 난수 6글자 생성 -> 세션에 저장함
+
+- 사용자에게 메세지 보냄(코드 복붙)
+
+5. gmailCheckAction.jsp: 사용자가 Email인증 버튼을 클릭했을 때 처리해주는 페이지, 사용자가 이메일 인증을 시도할 때 정상처리를 하기 위함
+
+  - hash 처리한 결과를 비교해 결과 값 반환
+String code = request.getParameter("code"); -> 사용자 입력값
+String code2 = 세션에 저장된 랜덤한 난수 6글자
+- boolean rightCode =  code2.equals(code) ? true : false;
+  참일때 성공 alert창 띄움, 거짓일 때 실패 alert창 띄움

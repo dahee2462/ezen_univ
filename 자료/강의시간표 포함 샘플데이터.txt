@@ -1,0 +1,40 @@
+         truncate lecture;
+         
+         INSERT INTO lecture(lno,lname,lyear,lsemester,lcredit,ltime, lroom,lmaxpeople,
+			lintro, lfocus,lstatus,pno,json_data)
+          VALUES(1,'강의1','2024','1','3','3','공대 404',30, '..', '..',3,1,
+             JSON_OBJECT('subject_name', '컴퓨터공학론',
+						'class_schedule', JSON_ARRAY('101','102','301')
+			)
+             );
+
+         INSERT INTO lecture(lno,lname,lyear,lsemester,lcredit,ltime, lroom,lmaxpeople,
+			lintro, lfocus,lstatus,pno,json_data)
+          VALUES(2,'강의2','2024','1','3','3','공대 404',30, '..', '..',3,2,
+             JSON_OBJECT('subject_name', '강의2',
+						'class_schedule', JSON_ARRAY('203','402','403')
+			)
+             );
+
+         INSERT INTO lecture(lno,lname,lyear,lsemester,lcredit,ltime, lroom,lmaxpeople,
+			lintro, lfocus,lstatus,pno,json_data)
+          VALUES(3,'강의3','2024','1','3','3','공대 404',30, '..', '..',3,3,
+             JSON_OBJECT('subject_name', '강의3',
+						'class_schedule', JSON_ARRAY('104','304','305')
+			)
+             );
+
+         INSERT INTO lecture(lno,lname,lyear,lsemester,lcredit,ltime, lroom,lmaxpeople,
+			lintro, lfocus,lstatus,pno,json_data)
+          VALUES(4,'강의4','2024','1','3','3','공대 404',30, '..', '..',3,4,
+             JSON_OBJECT('subject_name', '강의4',
+						'class_schedule', JSON_ARRAY('204','205','206')
+			)
+             );
+         INSERT INTO lecture(lno,lname,lyear,lsemester,lcredit,ltime, lroom,lmaxpeople,
+			lintro, lfocus,lstatus,pno,json_data)
+          VALUES(5,'강의5','2024','1','3','3','공대 404',30, '..', '..',3,5,
+             JSON_OBJECT('subject_name', '강의5',
+						'class_schedule', JSON_ARRAY('501','502','503')
+			)
+             );

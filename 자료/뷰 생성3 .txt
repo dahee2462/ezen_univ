@@ -1,0 +1,8 @@
+drop view Member;
+
+CREATE or REPLACE view Member AS 
+ ((SELECT s.sid as id, s.spw as pw, 'student' as type FROM student s)
+ UNION (SELECT p.pid, p.ppw, 'professor' as type FROM professor p))
+ UNION (SELECT a.aid, a.apw, 'administer' as type FROM administer a);
+
+
