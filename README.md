@@ -20,6 +20,8 @@ JDK 13.0.2|Javascript|ERMaster|
 GitHub|JQuery||
 ||JAVA(JSP, JDBC)||
 
+## 📑 PPT
+[참조링크 URL](https://www.canva.com/design/DAGF1Q5LhTA/QcEFZ0CuzNb3_xx-2AZDbg/view?utm_content=DAGF1Q5LhTA&utm_campaign=designshare&utm_medium=link&utm_source=editor)
 
 ## 📗 DB설계
 <img src="" height="650px">
