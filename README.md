@@ -24,10 +24,10 @@ GitHub|JQuery||
 [참조링크 URL](https://www.canva.com/design/DAGF1Q5LhTA/QcEFZ0CuzNb3_xx-2AZDbg/view?utm_content=DAGF1Q5LhTA&utm_campaign=designshare&utm_medium=link&utm_source=editor)
 
 ## 📗 DB설계
-<img src="" height="650px">
+<img src="https://github.com/dahee2462/ezen_univ/blob/main/%EC%9E%90%EB%A3%8C/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7/univ%20DB.png" height="650px">
 
 ## 📌 주요기능
-<img src="" height="400px">
+<img src="https://github.com/dahee2462/ezen_univ/blob/main/%EC%9E%90%EB%A3%8C/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7/univ%20%EC%84%9C%EB%B9%84%EC%8A%A4%EA%B5%AC%EC%84%B1%EB%8F%84.png" height="400px">
 
 
 
